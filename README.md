@@ -1,8 +1,23 @@
 # TestVagrant hiring challenge for applicants 
 
-About the codebase:
+Tasks: 1) Test are failing which needs your expertise to fix it.:
 ---------------------------------
-*This is a simple test project for testing a few scenarios on a sample flight/hotel booking website. There are **3 tests** in total spread over 3 test classes. Following tech stack has been used to develop the same.*
+*Fixes: I have fixed these test scripts for Ubuntu OS.
+
+**FlightBookingTest**: 
+	1) Updated compatible chromedriver_linux driver for chrome 74 version.
+	2) On line 15, ChromeDriver instance is created without setting system property for chromedriver. This instance should be created after setting system property.
+	3) On line 35, element id is incorrect for "To" textbax. Id should be "ToTag" instead of "toTag".
+	4) On lines 23,31,40,50, waitFor function using Thread.sleep to wait. We should use implicit or explicit wait to wait for element visibility.
+
+**HotelBookingTest**
+	1) Updated compatible chromedriver_linux for chrome 74 version.
+	2) On line 11, ChromeDriver instance is created without setting system property for chromedriver. This instance should be created after setting system property.
+	3) Locators aren't instantiated, we need to initialise the PageObject.
+	
+**SignInTest**:
+	1) On line 10, ChromeDriver instance is created without setting system property for chromedriver. This instance should be created after setting system property.
+	2) On line 23, to access signInButton element, we need to switch the frame as this element is available in frame.*
 
 **Tech Stack:** *Java*  *Selenium* *TestNG*  *Gradle/Maven*
 
@@ -13,7 +28,7 @@ About the codebase:
 3. Demonstration of OO concepts & Design Patterns
 4. Etiquette of Version control
 
-Problem Statement
+Problem Statemen
 ----------------------------------
 **Tasks:**
 
