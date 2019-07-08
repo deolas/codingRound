@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="TestVagrant" verbose="1" parallel="false">
+  <listeners>
+      <listener class-name = "testvagrant.codingRound.base.RetryListener" />
+   </listeners>
+
+  <test name="Test Suite 1" preserve-order="true" verbose="1" >
+    <classes>
+           <class name="testvagrant.codingRound.testscripts.FlightBookingTest" />
+           <class name="testvagrant.codingRound.testscripts.HotelBookingTest" />
+           <class name="testvagrant.codingRound.testscripts.SignInTest" />
+    </classes>
+  </test>
+</suite>
